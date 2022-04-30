@@ -1,4 +1,6 @@
-def anonimizacion(data,np,pd):
+def anonimizacion(data):
+    import numpy as np
+    import pandas as pd
     from anonymizeip import anonymize_ip
     df = data
 

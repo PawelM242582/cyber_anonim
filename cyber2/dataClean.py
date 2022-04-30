@@ -1,12 +1,15 @@
 
 def dataCleaning(data):
-    import pandas as pd
-    nalist= data.columns[data.isna().any()].tolist()
-    typelist = data.dtypes
+    try:
+        import pandas as pd
+        nalist= data.columns[data.isna().any()].tolist()
+        typelist = data.dtypes
 
-    for item,typeitem in zip(nalist,typelist):
-        if typeitem in ('int64','float64'):
-            data[item] = data[item].fillna(0)
-        else:
-            data[item] = data[item].fillna('Lack')
-    return data
+        for item,typeitem in zip(nalist,typelist):
+            if typeitem in ('int64','float64'):
+                data[item] = data[item].fillna(0)
+            else:
+                data[item] = data[item].fillna('Lack')
+        return data
+    except Exception as e:
+        print(e)

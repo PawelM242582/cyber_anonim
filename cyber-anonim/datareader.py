@@ -1,5 +1,6 @@
 
-def dataread(pd):
+def dataread():
+    import pandas as pd
     try:
         path = r'cyber\UNSW_NB15\UNSW-NB15_1.csv'
         label = r'cyber\UNSW_NB15\NUSW-NB15_features.csv'

@@ -1,6 +1,6 @@
 
-def dataCleaning(data,pd):
-
+def dataCleaning(data):
+    import pandas as pd
     nalist= data.columns[data.isna().any()].tolist()
     typelist = data.dtypes
 
